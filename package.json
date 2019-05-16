@@ -1,9 +1,13 @@
 {
-  "name": "endian",
+  "name": "esy-endian",
   "version": "0.0.1",
-  "repo": "mikepb/endian.h",
   "description": "Portable endian conversion functions for C",
   "keywords": ["portable", "endian"],
   "license": "PD",
-  "src": ["endian.h"]
+  "esy": {
+    "install": [
+      ["mkdir", "#{self.install / 'include'}"],
+      ["cp", "#{self.root / 'endian.h'}", "#{self.install / 'include' / 'endian.h'}" ]
+    ]
+  }
 }
