@@ -71,7 +71,6 @@
 #	include <sys/param.h>
 
 #	if BYTE_ORDER == LITTLE_ENDIAN
-
 #		define htobe16(x) htons(x)
 #		define htole16(x) (x)
 #		define be16toh(x) ntohs(x)
@@ -82,9 +81,9 @@
 #		define be32toh(x) ntohl(x)
 #		define le32toh(x) (x)
 
-#		define htobe64(x) htonll(x)
+#		define htobe64(x) (x)
 #		define htole64(x) (x)
-#		define be64toh(x) ntohll(x)
+#		define be64toh(x) (x)
 #		define le64toh(x) (x)
 
 #	elif BYTE_ORDER == BIG_ENDIAN
